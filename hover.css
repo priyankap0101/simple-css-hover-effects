@@ -1,35 +1,81 @@
-/* Basic styling for the body */
+/* Base styling for the body */
 body {
   font-family: Arial, sans-serif;
-  background-color: #f8f9fa; /* Light background */
+  background-color: #f7f9fc; /* Light, neutral background */
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  min-height: 100vh;
   margin: 0;
+  color: #333; /* Neutral text color */
 }
 
-/* Simple button styling */
-.button {
-  background-color: #007bff; /* Initial color */
-  color: white;
-  padding: 15px 30px;
+/* Button styling */
+.btn {
+  background: linear-gradient(
+    135deg,
+    #0454ab,
+    #003d85
+  ); /* Subtle gradient for depth */
+  color: #ffffff; /* High contrast for accessibility */
+  padding: 12px 24px; /* Comfortable padding */
   border: none;
-  border-radius: 5px; /* Rounded corners */
-  font-size: 16px;
-  font-weight: bold;
+  border-radius: 10px; /* Slightly less rounded for a sleek look */
+  font: 600 16px/1.5 Arial, sans-serif; /* Compact and readable */
+  text-transform: uppercase; /* Emphasized text */
   cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth transition */
+  display: inline-flex; /* Flex for better alignment */
+  align-items: center;
+  justify-content: center;
+  gap: 8px; /* Space between icon and text */
+  transition: transform 0.2s ease, box-shadow 0.2s ease,
+    background-color 0.2s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.12); /* Subtle shadow for depth */
+  text-align: center;
+  user-select: none; /* Prevent text selection */
+  outline: none; /* Remove default outline */
 }
 
-/* Hover effect: Change color and scale */
-.button:hover {
-  background-color: #28a745; /* Green on hover */
-  transform: scale(1.1); /* Slight scale effect */
+/* Hover state */
+.btn:hover {
+  background: linear-gradient(
+    135deg,
+    #026e1b,
+    #004e16
+  ); /* Gradient hover effect */
+  transform: translateY(-2px); /* Lift effect */
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15); /* Enhanced shadow on hover */
 }
 
-/* Focus effect for accessibility */
-.button:focus {
-  outline: none;
-  border: 2px solid #0056b3; /* Blue border on focus */
+/* Focus state */
+.btn:focus-visible {
+  box-shadow: 0 0 0 4px rgba(2, 110, 27, 0.4); /* Focus ring with a soft green tint */
+}
+
+/* Active state */
+.btn:active {
+  transform: scale(0.97); /* Slight scale-down on click */
+  background: linear-gradient(
+    135deg,
+    #024e16,
+    #003a12
+  ); /* Darker gradient for active state */
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2); /* Reduced shadow for pressed effect */
+}
+
+/* Disabled state */
+.btn:disabled {
+  background: #b0b8c2; /* Muted gray */
+  color: #f7f7f7; /* Subtle contrast for text */
+  cursor: not-allowed;
+  opacity: 0.6; /* Disabled look */
+  box-shadow: none; /* No shadow for disabled buttons */
+}
+
+/* Responsive button adjustments */
+@media (max-width: 768px) {
+  .btn {
+    padding: 10px 20px; /* Slightly smaller padding for smaller screens */
+    font-size: 14px; /* Smaller text for responsiveness */
+  }
 }
