@@ -1,36 +1,36 @@
 /* Base styling for the body */
 body {
-  font-family: Arial, sans-serif;
-  background-color: #f7f9fc; /* Light, neutral background */
+  font-family: "Roboto", Arial, sans-serif; /* Modern and readable font */
+  background-color: #eef2f7; /* Slightly lighter, softer background */
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
   margin: 0;
-  color: #333; /* Neutral text color */
+  color: #2d2d2d; /* Slightly darker text for better contrast */
 }
 
 /* Button styling */
 .btn {
   background: linear-gradient(
     135deg,
-    #0454ab,
-    #003d85
-  ); /* Subtle gradient for depth */
+    #0460c1,
+    #02428d
+  ); /* Richer gradient for depth */
   color: #ffffff; /* High contrast for accessibility */
-  padding: 12px 24px; /* Comfortable padding */
+  padding: 14px 28px; /* Increased padding for a more premium feel */
   border: none;
-  border-radius: 10px; /* Slightly less rounded for a sleek look */
-  font: 600 16px/1.5 Arial, sans-serif; /* Compact and readable */
-  text-transform: uppercase; /* Emphasized text */
+  border-radius: 8px; /* Slightly sharper corners for a modern look */
+  font: 600 16px/1.5 "Roboto", Arial, sans-serif; /* Refined font */
+  text-transform: uppercase; /* Bold text appearance */
   cursor: pointer;
   display: inline-flex; /* Flex for better alignment */
   align-items: center;
   justify-content: center;
-  gap: 8px; /* Space between icon and text */
+  gap: 10px; /* Increased space between icon and text */
   transition: transform 0.2s ease, box-shadow 0.2s ease,
     background-color 0.2s ease;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.12); /* Subtle shadow for depth */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Softer shadow for a clean look */
   text-align: center;
   user-select: none; /* Prevent text selection */
   outline: none; /* Remove default outline */
@@ -40,42 +40,39 @@ body {
 .btn:hover {
   background: linear-gradient(
     135deg,
-    #026e1b,
-    #004e16
-  ); /* Gradient hover effect */
-  transform: translateY(-2px); /* Lift effect */
-  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15); /* Enhanced shadow on hover */
+    #027c24,
+    #025b1c
+  ); /* Gradient with a pop of vibrancy */
+  transform: translateY(-3px); /* Slightly enhanced lift effect */
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.18); /* Subtle glow on hover */
 }
 
 /* Focus state */
 .btn:focus-visible {
-  box-shadow: 0 0 0 4px rgba(2, 110, 27, 0.4); /* Focus ring with a soft green tint */
+  box-shadow: 0 0 0 4px rgba(2, 124, 36, 0.4); /* Slightly brighter focus ring */
 }
 
 /* Active state */
 .btn:active {
-  transform: scale(0.97); /* Slight scale-down on click */
+  transform: scale(0.96); /* More noticeable press effect */
   background: linear-gradient(
     135deg,
-    #024e16,
-    #003a12
-  ); /* Darker gradient for active state */
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2); /* Reduced shadow for pressed effect */
+    #025a1c,
+    #003f15
+  ); /* Richer dark gradient for active state */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2); /* Pressed-in shadow */
 }
 
 /* Disabled state */
 .btn:disabled {
-  background: #b0b8c2; /* Muted gray */
-  color: #f7f7f7; /* Subtle contrast for text */
+  background: #c4c9d0; /* Softer gray */
+  color: #f8f8f8; /* Improved readability */
   cursor: not-allowed;
-  opacity: 0.6; /* Disabled look */
-  box-shadow: none; /* No shadow for disabled buttons */
+  opacity: 0.5; /* Fainter look */
+  box-shadow: none;
 }
 
-/* Responsive button adjustments */
-@media (max-width: 768px) {
-  .btn {
-    padding: 10px 20px; /* Slightly smaller padding for smaller screens */
-    font-size: 14px; /* Smaller text for responsiveness */
-  }
+/* Subtle animation */
+.btn {
+  animation: fadeIn 0.4s ease-in-out;
 }
